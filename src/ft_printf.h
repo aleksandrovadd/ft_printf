@@ -6,7 +6,7 @@
 /*   By: daleksan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 18:39:42 by daleksan          #+#    #+#             */
-/*   Updated: 2017/04/04 14:02:55 by daleksan         ###   ########.fr       */
+/*   Updated: 2017/10/29 00:28:55 by daleksan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
-# include "../../libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct	s_plist
 {
@@ -57,7 +57,6 @@ void			ft_for_o(t_plist *spec, va_list ap, int *len);
 void			ft_for_perc(t_plist *spec, int *len);
 void			ft_for_d(t_plist *spec, va_list ap, int *len);
 void			ft_for_p(t_plist *spec, va_list ap, int *len);
-//void			ft_modify_d(t_plist *spec, char *str);
 void			ft_modify_x(t_plist *spec, char *str);
 int				ft_pchar(int i, char c);
 int				ft_pstr(char *str, int len);

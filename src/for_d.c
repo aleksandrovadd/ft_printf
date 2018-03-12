@@ -6,7 +6,7 @@
 /*   By: daleksan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/04 13:37:54 by daleksan          #+#    #+#             */
-/*   Updated: 2017/04/04 13:39:56 by daleksan         ###   ########.fr       */
+/*   Updated: 2017/10/29 00:26:43 by daleksan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	ft_modify_d(t_plist *spec, char *str)
 		spec->precision = len;
 }
 
-void	ft_width_d_2(int ln, t_plist *spec, int *len, char *str)
+void		ft_width_d_2(int ln, t_plist *spec, int *len, char *str)
 {
 	if (spec->minus == 1 && spec->width > 0)
 	{
@@ -64,9 +64,9 @@ void	ft_width_d_2(int ln, t_plist *spec, int *len, char *str)
 	}
 }
 
-void	ft_width_d(t_plist *spec, int *len, char *str)
+void		ft_width_d(t_plist *spec, int *len, char *str)
 {
-	int ln;
+	int		ln;
 
 	if (str[0] == '-')
 		str++;
@@ -86,7 +86,7 @@ void	ft_width_d(t_plist *spec, int *len, char *str)
 		ft_width_d_2(ln, spec, len, str);
 }
 
-void	ft_for_d(t_plist *spec, va_list ap, int *len)
+void		ft_for_d(t_plist *spec, va_list ap, int *len)
 {
 	intmax_t	d;
 	char		*tmp;

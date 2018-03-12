@@ -6,21 +6,23 @@
 #    By: daleksan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/10 19:40:36 by daleksan          #+#    #+#              #
-#    Updated: 2017/10/29 14:48:16 by daleksan         ###   ########.fr        #
+#    Updated: 2017/10/29 14:47:11 by daleksan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = @gcc
 
-NAME = libftprintf.a
+NAME = libft.a
 
-LIBFT = ../libft.a
-
-SRC = src/type_def.c src/spec_init.c\
-		src/parse_specif.c src/length.c src/ft_pchar.c src/for_x.c\
-		src/for_u.c src/for_o.c src/for_d.c src/for_c.c\
-		src/for_p.c src/for_s.c src/ft_printf.c src/libft.c\
-		src/ft_lib.c src/parse_specif_2.c src/ft_itoa.c
+SRC = ft_memfree.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c\
+		ft_lstmap.c ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
+		ft_isprint.c ft_itoa.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c\
+		ft_memdel.c ft_memmove.c ft_memset.c ft_putchar.c ft_putchar_fd.c ft_putendl.c\
+		ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_strcat.c\
+		ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c\
+		ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c\
+		ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c\
+		ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c get_next_line.c
 
 CFLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
@@ -28,19 +30,13 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make -C libft/
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "\033[32;1m<<lib ft_printf done>>\033[0m"
-
+	@echo "\033[32;1m<<libft done>>\033[0m"
 clean:
 	@rm -f $(OBJ)
-	@make -C libft clean 
-	@echo "\033[1;36m<<objects deleted>>\033[0m"
 	
 fclean: clean
 	@rm -rf $(NAME)
-	@make -C libft fclean
-	@echo "\033[1;31m<<lib ft_printf deleted>>\033[0m"
 
 re: fclean all
