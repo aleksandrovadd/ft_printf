@@ -1,0 +1,1 @@
+gcc printf_main.c libftprintf.a libft/libft.a && ./a.out
