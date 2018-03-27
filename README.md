@@ -2,7 +2,7 @@
 Re-writing the standart C function printf
 
 Task was to recode the libc’s printf function.
-• There isn't the buffer management in the printf function.
+• There isn't the buffer management in this ft_printf function.
 • Managed the following conversions: sSpdDioOuUxXcC
 • Managed %%
 • Managed the flags #0-+ and space
